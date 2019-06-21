@@ -1,0 +1,25 @@
+<div class="d-container">
+
+  <h1>File To base64 </h1>
+
+  <input type="file" alife-file-to-base64 multiple (onFileChanged)="onFileChanges($event)" [(fileModel)]="files"
+    [(rawFileModel)]="rawFiles" />
+
+  <p> La imagen va aqui: <img src='{{ files[0].base64 }}' width="200px" height="200px"> </p>
+
+  <button (click)="test()">Cargar Imagen</button><br /><br />
+</div>
+<br>
+<h3>Registro de Img</h3>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Imagenes Cargadas</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of newArray">
+      <th><img src='{{item}}' width="200px" height="200px"> </th>
+    </tr>
+  </tbody>
+</table>
